@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/www",
+  "scripts": {
+    "watch": "nodemon ./index.js",
+    "start": "node ./bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "socket.io": "^3.0.4",
+    "ws": "^7.4.1"
+  }
+}
