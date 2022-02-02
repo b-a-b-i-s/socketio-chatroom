@@ -32,18 +32,15 @@ const server = http.createServer(app);
 
 io.on('connection', (socket) => {
 
-  let userName = socket.id.substr(0,5)
+  let userName = socket.id.substr(0,5);
 
-    console.log(`user ${userName} connected`);
     io.emit('chat message', `user ${userName} connected`)
 
     socket.on('chat message', (message) =>     {
-        console.log(message);
         io.emit('chat message', `${userName} \n${message}` );   
     });
 
     socket.on('disconnect', () => {
-      console.log(`user ${userName} disconnected`);
       io.emit('chat message', `user ${userName} disconnected`)
     });
   
